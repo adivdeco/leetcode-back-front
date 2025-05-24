@@ -20,16 +20,53 @@ function Login() {
  
   return (
     <>
-      <form onSubmit={handleSubmit((data)=>{console.log(data)})} className="bg-gray-500 flex flex-col gap-4 p-7 w-100 mx-auto mt-65 rounded-md">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="card w-96 bg-gray-700 shadow-2xl">
+        <div className="card-body">
+        <h1 className="card-title justify-center text-3xl mask-radial-from-neutral-950 font-mono">WOW C0DE</h1>
 
-      <input className="border-2 border-gray-300 p-2 rounded-md" placeholder="Email" {...register('email', { required: true })}/>
-      {errors.email?.message && <p>{errors.email?.message}</p>}
+      <form onSubmit={handleSubmit((data)=>{console.log(data)})}>
+      
+      <div className="form-control mt-4">
+       <label className=" label mb-1">
+         <span className="label-text">Email</span>
+       </label>
+    <input type="email"
+      className={`input input-bordered ${errors.email && 'input-error'}`} 
+      placeholder="adiv@gmail.com"
+      {...register('email', { required: true })}
+      />
+      {errors.email?.message && <span className="text-error">{errors.email?.message}</span>}
+     </div>
 
-      <input type="password" className="border-2 border-gray-300 p-2 rounded-md" placeholder="Passward" {...register('passward')}/>
-        {errors.passward?.message && <p>{errors.passward?.message}</p>}
+     <div className="form-control mt-4">
+       <label className="label mb-1">
+           <span className="label-text">Passward</span>
+       </label>
+      <input type="password" className={`input input-bordered ${errors.passward && 'input-error'}`} placeholder="••••••" {...register('passward')}/>
+         {errors.passward?.message && <p className="text-error">{errors.passward?.message}</p>}
+     </div>
 
-      <button type="submit" className="btn">Submit</button>
-    </form>
+          <div className="form-control mt-8 flex justify-center">
+              <button type="submit" className="btn btn-primary w-full">
+                Login
+              </button>
+          </div>
+          <div className="form-control mt-2 flex justify-center">
+              <button type="button" className="btn btn-link">
+                Forget Passward?
+              </button>
+          </div>  
+          <div className="form-control flex justify-center">
+              <button type="button" className="btn btn-link `btn-link-secondary`">
+                Don't have an account?
+              </button>
+          </div>
+          
+        </form>  
+             </div>
+             </div>
+             </div>
     </>
   );
 }
