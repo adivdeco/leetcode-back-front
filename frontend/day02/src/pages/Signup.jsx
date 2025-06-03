@@ -73,11 +73,18 @@ function Signup() {
         {errors.ConformPassward?.message && <p className="text-error">{errors.ConformPassward?.message}</p>}
     </div>
 
-       <div className="form-control mt-6 flex justify-center">
+          <div className="form-control mt-6 flex justify-center">
               <button type="submit" className="btn btn-primary w-full">
                 Sign Up
               </button>
-            </div>
+          </div>
+
+          <div className="form-control flex mt-3 justify-center">
+              <button type="button" className="btn btn-link `btn-link-tertiary`">
+                Already have an account?
+              </button>
+          </div>
+          
     </form>
         </div>
 
