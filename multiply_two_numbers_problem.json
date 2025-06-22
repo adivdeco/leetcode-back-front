@@ -57,3 +57,13 @@
     }
   ]
 }
+
+git rm -f --cached -r backend/day01
+git rm -f --cached -r backend/day02
+git rm -f --cached -r backend/day03
+git rm -f --cached -r backend/day04
+git rm -f --cached -r backend/day05
+git rm -f --cached -r backend/day06
+git rm -f --cached -r backend/frontday03
+git rm -f --cached -r backend/frontday04
+git rm -f --cached -r frontend/day04
